@@ -13,11 +13,20 @@ class MovieViewModel(private val repo: MovieRepository) : ViewModel() {
         emit(Resource.Loading())
 
         try {
-            emit(Resource.Success(repo.getUpcomingMovies()))
+            emit(
+                Resource.Success(
+                    Triple(
+                        repo.getUpcomingMovies(),
+                        repo.getPopularMovies(),
+                        repo.getTopRatedMovies()
+                    )
+                )
+            )
         } catch (e: Exception) {
             emit(Resource.Failure(e))
         }
     }
+
 }
 
 class ModelViewModelFactory(private val repo: MovieRepository) : ViewModelProvider.Factory {

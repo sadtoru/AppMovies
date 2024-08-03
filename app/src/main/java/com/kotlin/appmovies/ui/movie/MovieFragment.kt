@@ -49,5 +49,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie) {
             }
         })
 
+
+
     }
 }

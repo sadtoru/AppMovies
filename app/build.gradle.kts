@@ -62,6 +62,9 @@ dependencies {
     // LiveData
     implementation(libs.androidx.lifecycle.livedata.ktx)
 
+    //utils -> Glide carga de imagenes
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
