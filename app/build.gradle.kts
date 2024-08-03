@@ -57,6 +57,11 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.converter.gson)
 
+    //view model
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    // LiveData
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
