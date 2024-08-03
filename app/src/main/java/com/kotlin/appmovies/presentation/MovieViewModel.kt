@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 
 class MovieViewModel(private val repo: MovieRepository) : ViewModel() {
 
-    fun fetchUpcomingMovies() = liveData(Dispatchers.IO) {
+    fun fetchMainScreenMovies() = liveData(Dispatchers.IO) {
         emit(Resource.Loading())
 
         try {

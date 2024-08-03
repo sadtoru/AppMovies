@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
+
 }
 
 android {
@@ -65,6 +66,10 @@ dependencies {
     //utils -> Glide carga de imagenes
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
+
+    //rv
+    implementation(libs.androidx.recyclerview)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
